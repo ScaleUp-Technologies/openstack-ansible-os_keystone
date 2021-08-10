@@ -16,6 +16,8 @@
 ## Verbosity Options
 debug: False
 
+keystone_all_group: "{{ groups['keystone_all'] }}"
+
 # Set the host which will execute the shade modules
 # for the service setup. The host must already have
 # clouds.yaml properly configured.

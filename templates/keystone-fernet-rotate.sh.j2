@@ -26,7 +26,7 @@ function autorotate {
     {{ keystone_bin }}/keystone-manage fernet_rotate \
                                        --keystone-user "{{ keystone_system_user_name }}" \
                                        --keystone-group "{{ keystone_system_group_name }}"
-    {% for host in groups['keystone_all'] %}
+    {% for host in keystone_all_group %}
 
     {% if inventory_hostname != host %}
 
