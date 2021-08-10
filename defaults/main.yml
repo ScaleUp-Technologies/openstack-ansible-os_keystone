@@ -266,6 +266,8 @@ keystone_ssl_self_signed_subject: "/C=US/ST=Texas/L=San Antonio/O=IT/CN={{ inter
 #keystone_user_ssl_cert: <path to cert on ansible deployment host>
 #keystone_user_ssl_key: <path to cert on ansible deployment host>
 #keystone_user_ssl_ca_cert: <path to cert on ansible deployment host>
+# search certificate on Remote host:
+keystone_user_ssl_remote: False
 
 # Set to true when terminating SSL/TLS at a load balancer
 keystone_external_ssl: false

@@ -17,6 +17,7 @@
   copy:
     src: "{{ keystone_user_ssl_cert }}"
     dest: "{{ keystone_ssl_cert }}"
+    remote_src: "{{ keystone_user_ssl_remote }}"
     owner: "root"
     group: "root"
     mode: "0644"
@@ -29,6 +30,7 @@
   copy:
     src: "{{ keystone_user_ssl_key }}"
     dest: "{{ keystone_ssl_key }}"
+    remote_src: "{{ keystone_user_ssl_remote }}"
     owner: "root"
     group: "root"
     mode: "0640"
@@ -41,6 +43,7 @@
   copy:
     src: "{{ keystone_user_ssl_ca_cert }}"
     dest: "{{ keystone_ssl_ca_cert }}"
+    remote_src: "{{ keystone_user_ssl_remote }}"
     owner: "root"
     group: "root"
     mode: "0644"
