@@ -16,7 +16,7 @@
 - name: Distribute self signed ssl key
   copy:
     dest: "{{ keystone_ssl_key }}"
-    content: "{{ hostvars[groups['keystone_all'][0]]['keystone_ssl_key_fact'] | b64decode }}"
+    content: "{{ hostvars[keystone_all_group[0]]['keystone_ssl_key_fact'] | b64decode }}"
     owner: "{{ keystone_system_user_name }}"
     group: "{{ keystone_system_group_name }}"
     mode: "0640"
@@ -27,7 +27,7 @@
 - name: Distribute self signed ssl cert
   copy:
     dest: "{{ keystone_ssl_cert }}"
-    content: "{{ hostvars[groups['keystone_all'][0]]['keystone_ssl_cert_fact'] | b64decode }}"
+    content: "{{ hostvars[keystone_all_group[0]]['keystone_ssl_cert_fact'] | b64decode }}"
     owner: "{{ keystone_system_user_name }}"
     group: "{{ keystone_system_group_name }}"
     mode: "0640"
